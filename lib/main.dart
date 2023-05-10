@@ -1,4 +1,5 @@
 import 'package:c5_navigation/home_screen.dart';
+import 'package:c5_navigation/screen_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,13 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen()
+      // home: const HomeScreen()
+      initialRoute: HomeScreen.id,
+      routes: {
+        HomeScreen.id:(context)=>HomeScreen(),
+        ScreenTwo.id: (context)=>ScreenTwo(),
+
+      },
     );
   }
 }

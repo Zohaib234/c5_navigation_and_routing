@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+  static const String id = "HomeScren";
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -22,7 +23,9 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Center(
             child: TextButton(onPressed: () {
-              Navigator.push(context , MaterialPageRoute(builder: (context)=>ScreenTwo()));
+
+              Navigator.pushNamed(context, ScreenTwo.id);
+
             },
                 child: const Text("Screen 1")),
           )
